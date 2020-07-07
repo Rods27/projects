@@ -4,23 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        p{font-size:14px;font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif}
+        h1{color:rgb(255, 255, 255);}
+        body{
+            background-color: rgb(88, 52, 37);
+            background-image:url(img/madeira2.jpg);
+            color:rgb(219, 210, 210);
+            }
+        .title{color: rgb(255, 255, 255);font-weight: bold;font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif}
+        .rods{color: rgb(0, 0, 0);font-weight: bold;background-color: white;width:10%;}       
+        .habs{color: rgb(0, 0, 0);font-weight: bold;background-color: white;width:10%;}     
+        .links{color: rgb(0, 0, 0);font-weight: bold;background-color: white;width:10%;}         
+        .link{color: rgb(0, 0, 0);font-weight: bold;background-color: white;width:10%;}
+        #rods{color:rgb(rgb(85, 23, 23), green, blue)}
+    </style>
+    
 </head>
 <body>
-    <h1>Rodrigo Leite</h1>
+    <h1 class="title">Rodrigo Leite</h1>
     <ol>
-        <li><a href="#rods">Sobre Mim</a></li>
-        <li><a href="#habs">Habilidades</a></li>
-        <li><a href="#links">Links Indicados</a></li>
+        <li><a class="rods" href="#rods">Sobre Mim</a></li>
+        <li><a  class="habs" href="#habs">Habilidades</a></li>
+        <li><a class="links" href="#links">Links Indicados</a></li>
     </ol>
     <img id= "foto" src="img/asd.jpeg" alt="Imagem de Rodrigo" width="250">
-    <h3 id= "rods">Sobre Mim</h3>
+    <h3 class="title"id= "rods">Sobre Mim</h3>
     <p>Estudante de Desenvolvimento de Software pela Trybe, formado em nutrição.<br>Brasileiro, reside em Santo Andre/SP</p>
     <ul id="habs">
         <li><strong>Python</strong></li>
         <li>Shell</li>
         <li>HTML</li>
     </ul>
-    <a href="#foto">Ver foto</a> <br><br>
-    <a id="links" target= "blank" href="https://github.com/Rods27?tab=repositories">Git Hub</a>
+    <a class="link" href="#foto">Ver foto</a> <br><br>
+    <a class="link" id="links" target= "blank" href="https://github.com/Rods27?tab=repositories">Git Hub</a>
 </body>
 </html>
