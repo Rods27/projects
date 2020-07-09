@@ -4,39 +4,50 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-        p{font-size:14px;font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif}
-        h1{color:rgb(255, 255, 255);}
-        body{
-            background-color: rgb(88, 52, 37);
-            background-image:url(img/madeira2.jpg);
-            color:rgb(219, 210, 210);
-            }
-        .title{color: rgb(255, 255, 255);font-weight: bold;font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif}
-        .rods{color: rgb(0, 0, 0);font-weight: bold;background-color: white;width:10%;}       
-        .habs{color: rgb(0, 0, 0);font-weight: bold;background-color: white;width:10%;}     
-        .links{color: rgb(0, 0, 0);font-weight: bold;background-color: white;width:10%;}         
-        .link{color: rgb(0, 0, 0);font-weight: bold;background-color: white;width:10%;}
-        #rods{color:rgb(rgb(85, 23, 23), green, blue)}
-    </style>
-    
+    <link rel="stylesheet" type="text/css" href="./style.css">
 </head>
 <body>
-    <h1 class="title">Rodrigo Leite</h1>
-    <ol>
-        <li><a class="rods" href="#rods">Sobre Mim</a></li>
-        <li><a  class="habs" href="#habs">Habilidades</a></li>
-        <li><a class="links" href="#links">Links Indicados</a></li>
-    </ol>
-    <img id= "foto" src="img/asd.jpeg" alt="Imagem de Rodrigo" width="250">
-    <h3 class="title"id= "rods">Sobre Mim</h3>
-    <p>Estudante de Desenvolvimento de Software pela Trybe, formado em nutrição.<br>Brasileiro, reside em Santo Andre/SP</p>
-    <ul id="habs">
-        <li><strong>Python</strong></li>
+
+    <div class="boxtop">
+    <img id="foto" src="img/asd.jpeg" alt="Imagem de Rodrigo" width="250">
+    <h1 class="title"id= "rods">Rodrigo Leite</h1>
+    <h2 class="title"id= "dev">Desenvolvedor Full Stack</h1>
+    </div>
+
+    <div class="container">
+    <div class="about-box">
+    <p id="#allskills">Estudante de Desenvolvimento de Software<br> pela Trybe, formado em nutrição.
+    Brasileiro, reside em Santo Andre/SP<br><br><br><br></p>
+    </div>
+
+    <div class= "hard-skills">
+    <p>Hard skills</p>
+    <ul id="allskills">
+        <li><span>Python</span></li>
         <li>Shell</li>
         <li>HTML</li>
+        <li>CSS</li>
     </ul>
-    <a class="link" href="#foto">Ver foto</a> <br><br>
-    <a class="link" id="links" target= "blank" href="https://github.com/Rods27?tab=repositories">Git Hub</a>
+    </div>
+
+    <div class= "soft-skills">
+        <p>Soft skills</p>
+        <ul id="allskills">
+            <li><span>Maturidade</span></li>
+            <li>bla1</li>
+            <li>bla2</li>
+            <li>bla2</li>
+        </ul>
+    </div>
+
+    </div>
+
+    <a target= "blank" href="https://github.com/Rods27?tab=repositories" title="linkgit">
+        <img id= "git-link"src="img/git.png" alt= git width="70">
+        </a>
+    
+        <a target= "blank" href="https://www.linkedin.com/in/rodrigoleite27/" title="linkedin">
+        <img id= "linkedin-link"src="img/linkedin.png" alt= git width="70">
+        </a>
 </body>
 </html>
