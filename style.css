@@ -1,46 +1,61 @@
 p{font-size:14px;font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif}
 body{
+    padding: 0;
+    margin: 0;
     background-image:url(img/madeira2.jpg);
     color:rgb(219, 210, 210);
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     }
 
+.header{
+    background-color: black;
+    width: 100%;
+    display: inline-block;
+    height: 25px;
+}
+.header-top1{
+    width: 100px;
+    text-align: left;
+    float: left;
+}
+
+.header-top2{
+    width: 100px;
+    text-align: right;
+    float: right;
+}
+
+.boxtop{ 
+    padding-top: 10px;
+    width: 100%;
+    display: inline-block;
+    text-align: center;
+    padding-bottom: 5%;
+}
+
 #foto{
-    position: absolute;
-    top: 10%;
-    left: 43%;
     width: 260px;
     border-radius: 10%;
     border: 5px ridge rgb(15, 15, 15);
-    }
+}
 
-#git-link{
-    position: absolute;
-    top: 90%;
-    left: 45.8%;
-    }
+.fotoPerfil{
+    display: inline-block;
+    text-align: center;
+}
 
-#linkedin-link{
-    position: absolute;
-    top: 90%;
-    left: 50.3%;
-    }
 
-.title{
-    font-size: 25px;
-    color: rgb(255, 255, 255);
-    font-weight: bold;
-    }
-    
-h1.title{
-    font-size: 50px;
+h1, h2{
     color: rgb(0, 0, 0);
-    padding-left: 41.6%;
-    padding-top: 18%;
+    
 }
 
 p{
     font-size: 25px;
+}
+
+span{
+    text-decoration: underline;
 }
 
 #allskills{
@@ -83,3 +98,12 @@ p{
     display: inline-block;
     margin: 5px;
 } 
+
+.footer{
+    width: 100%;
+    position: absolute;
+    display: inline-block;
+    text-align: center;
+    bottom: 0;
+    left: 0;
+}
