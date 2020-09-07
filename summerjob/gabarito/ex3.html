@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <style>
+    .div{
+      background: rgba(231, 230, 230, 0.418);
+      border: solid black 3px;
+      margin-top: 130px;
+    }
+    .div-1{
+      width: 300px;
+      height: 100px;
+    }
+  </style>
+  <input class="input-1 div">
+  <p></p>
+  <div class="div-1 div"></div>
+  <button class="clear">Clear</button>
+  <script>
+    const input = document.querySelector('.input-1');
+    const div = document.querySelector('.div-1');
+    const clear = document.querySelector('.clear');
+    const alerta = document.getElementsByTagName('p')[0]
+
+
+    input.addEventListener('input', function () {
+      div.innerText = input.value;
+    })
+    clear.addEventListener('click', function () {
+      div.innerText = ''
+      input.value = ''
+      alerta.innerText = ''
+    })
+    input.addEventListener('copy', function () {
+      alerta.innerText = 'Se for copiar o texto, deixe os créditos para o autor!'
+    })
+    div.addEventListener('copy', function () {
+      alerta.innerText = 'Se for copiar o texto, deixe os créditos para o autor!'
+    })
+  </script>
+</body>
+</html>

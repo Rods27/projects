@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" type="text/css" href="./style.css" id="stylesheet">
+</head>
+<body>
+  <header class="header"></header>
+  <div class="central-title">
+    <h1 class="center-h1">JavaScript - Eventos</h1>
+  </div>
+  <div class="container">
+    <div class="nav-div">
+      <nav class="left-navigator">
+        <ul class="nav-bar">
+          <li><a href="#what-learn">Oque vamos aprender?</a></li>
+          <li><a href="#content">Conteúdos</a></li>
+          <li><a href="#exemplos">Exemplos</a></li>
+          <li><a href="#exercises">Exercícios</a></li>
+          <li><a href="#aditional-content">Recursos adicionais (opcinal)</a></li>
+          <li class="stylesheet">Quer um layout alternativo?</li>
+        </ul>
+      </nav>
+    </div>
+    <section class="class-content">
+      <h2 class="h2-content" id="what-learn">Oque vamos aprender?</h2>
+      <p>
+        Já pensou em adicionar funcionalidades exclusivas à sua pagina? Como passar o mouse em uma area e mudar seu html, ou 
+        até mesmo o seu css? Com eventos, você pode dar toda a exclusividade a sua pagina.
+      </p>
+      <p>
+        Hoje você irá aprender como manipular eventos do Javascript para deixar sua página mais dinâmica.
+      </p>
+      <br><br>
+      <h3 class="h3-content" id="content">Você será capaz de:</h3>
+      <ul class ="li-content">
+        <li>Mudar HTML e CSS de sua página de forma dinâmica, de acordo com a interação do usuário</li>
+        <li>Aplicar eventos de <code class="pink">click</code> e <code class="pink">change.</code></li>
+      </ul>
+      <br><br>
+      <h3 class="h3-content">Porque isso é importante?</h3>
+      <p>
+        Como um tryber já veterano, posso te dizer que eventos são de suma importância, sem eles não tem como você deixar
+        sua pagina interativa e moderna. 
+      </p>
+      <p>
+        Posso até te dizer que daqui pra frente vai ser até comum eventos quando você for
+        criar ou atualizar uma página então tente entender esse conteúdo, mas não se desespere, como é algo comum você vai
+        acabar entendendo com o tempo.. 😉
+        <p>Vamos lá?</p>
+      </p>
+      <br><br>
+      <h2 class="h2-content">Conteúdos</h2>
+      <p>
+
+      </p>
+      <h3 class="h3-content">Parte I - O que é um escutador de eventos?</h3>
+      <p>
+        Como o próprio nome diz, ele irá escutar um evento e fazer alguma interação, no nosso caso, executar uma função, 
+        esta função pode ser anônima ou uma função com nome, iremos ver mais pra frente sobre isso, não se preocupe ✌
+      </p>
+      <p>
+        Chamamos de <code class="pink">AddEventListener</code>, ou seja, adicionamos um "escutador de eventos"  e logo depois ele recebe dois parametros, 
+        um deles é o evento, e o outro a ação a ser executada no caso uma função.
+      </p>
+      <p>
+        Mas antes disso, vamos aprender um evento que você usará bastante, o <code class="pink">window.onload</code>.
+      </p>
+      <div class="video-1 video">
+        <object width="800" height="450"> 
+        <param name="movie" value="https://www.youtube.com/v/e-7SrWgx0ok"/>
+        </object>
+      </div>
+      <h3 class="h3-content">Parte II - Conheça o addEventListener</h3>
+      <p>
+        O <code class="pink">AddEventListener</code> é uma função nativa do javascript, ou seja, ela já vem na linguagem Javascript em si.<br></p>
+      <p>
+        Como foi falado mais acima, o <code class="pink">AddEventListener</code> recebe dois parametros.
+      </p>
+      <ul class="li-content">
+        <li>O primeiro será o evento, pode ser um <code class="pink">click</code>, por exemplo.</li>
+        <li>O segundo será a função a ser executada, pode ser anônima ou conter um nome.</li>
+      </ul>
+      <p>Vamos Exemplificar:</p>
+      <pre class="pre-example-1" id="exemplos">
+        <code class="example">
+    <span class="dark-blue">const </span><span class="light-blue">button</span> = <span class="lighter-blue">document</span><span class="events">.querySelector</span>(<span class="string">'.submit-button'</span>);
+    
+    <span class="dark-blue">function</span> <span class="events">mudarTexto</span> () {
+      <span class="dark-blue">const</span> <span class="light-blue">contentDiv</span> = <span class="lighter-blue">document</span><span class="events">.querySelector</span>(<span class="string">'.content-div'</span>);
+      <span class="dark-blue">let</span> <span class="light-blue">divText</span> = <span class="string">'Esse será o texto da div'</span>;
+
+      <span class="light-blue">contentDiv</span>.<span class="lighter-blue">innerText</span> = <span class="lighter-blue">divText</span>; 
+    }
+
+    <span class="light-blue">button</span>.<span class="events">addEventListener</span>(<span class="string">'click'</span>, <span class="events">mudarTexto</span>);
+
+        </code>
+  
+      </pre>
+      <br>
+      <p>
+        No exemplo acima criamos: <code class="pink">button</code> e <code class="pink">contentDiv</code>, que serão o botao e o elemento div.
+      </p>
+      <p>
+        Então logo criamos nossa função <code class="pink">novoTexto</code> que substitui o texto atual da nossa div pelo divText <code class="pink">divText</code>.<br>
+        E então chamamos nosso <code class="pink">EventListener</code> com o evento <code class="pink">click</code>, pra quando for clicado no botão, mudar<br>
+        o texto da div. Copie e cole no seu vscode e rode e veja o resultado!
+      </p>
+      <p>
+        Simples, não? 😀
+      </p>
+      <br>
+      <p>Agora vamos ver, este video explicando um pouco melhor sobre o evento <code class="pink">click</code>.</p>
+  
+      <div class="video-2 video">
+        <iframe width="800" height="450" src="https://www.youtube.com/embed/-dQc6ul0MPI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    
+      <p>
+        Veja este outro exemplo, usando <code class="pink">mouseover</code> e <code class="pink">mouseout</code>.
+      </p>
+      <br>
+      <pre class="pre-example-2">
+        <code class="example">
+    <span class="dark-blue">const </span><span class="light-blue">button</span> = <span class="lighter-blue">document</span><span class="events">.querySelector</span>(<span class="string">'.submit-button'</span>);
+    
+    <span class="dark-blue">function</span> <span class="events">novoTexto</span> () {
+      <span class="dark-blue">const</span> <span class="light-blue">contentDiv</span> = <span class="lighter-blue">document</span><span class="events">.querySelector</span>(<span class="string">'.content-div'</span>);
+      <span class="dark-blue">let</span> <span class="light-blue">divText</span> = <span class="string">'Esse será o texto da div'</span>;
+
+      <span class="light-blue">contentDiv</span>.<span class="lighter-blue">innerText</span> = <span class="lighter-blue">divText</span>; 
+
+      <span class="condition">if</span> (<span class="light-blue">contentDiv</span>.<span class="lighter-blue">innerText</span> === <span class="light-blue">divText</span>) {
+        <span class="light-blue">contentDiv</span>.<span class="events">addEventListener</span>(<span class="string">'mouseover'</span>, <span class="dark-blue">function</span> () {
+          <span class="light-blue">contentDiv</span>.<span class="lighter-blue">innerText</span> = <span class="light-blue">novoTexto</span>;
+        });
+        <span class="light-blue">contentDiv</span>.<span class="events">addEventListener</span>(<span class="string">'mouseout'</span>, <span class="dark-blue">function</span> () {
+          <span class="light-blue">contentDiv</span>.<span class="lighter-blue">innerText</span> = <span class="light-blue">divText</span>;
+        });
+      }
+    }
+
+    <span class="light-blue">button</span>.<span class="events">addEventListener</span>(<span class="string">'click'</span>, <span class="events">novoTexto</span>);
+        </code>
+      </pre>
+      <br>
+      <p>
+        Neste exemplo, diferente do exemplo anterior, usamos função anônima, além de usarmos o <code class="pink">click</code> para mudar o texto do elemento div, também colocamos um <code class="pink">mouseover</code> <br>
+        para mudar o texto caso o mouse esteja em cima da div e um <code class="pink">mouseout</code> caso o mouse saia da div.
+      </p>
+      <p>
+        Agora que já está mais familiarizado com o <code class="pink">AddEventListener</code> olhe <a href="https://www.w3schools.com/jsref/dom_obj_event.asp" target="_blank">este</a> artigo e veja a quantidade de eventos que existem para você usar no seu código! 
+      </p>
+      <h2 class="h2-content" id="exercises">Exercicios</h2>
+      <p>Agora vamos colocar a mão na massa!</p>
+      <p>Caso você tenha terminado tudo, adicionei uma sessão <code class="pink">Bonus</code> a cada exercicio, onde necessitará uma leve pesquisa para completá-los! </p>
+      <p>Boa sorte!</p>
+      <h3 class="h3-content">Exercício 1</h3>
+      <p>
+        Crie dois inputs, para armazenar dois números aleatórios em cada um. Depois crie um botão para somar estes dois números. 
+        Dica: use o evento <code class="pink">click</code>.
+      </p>
+      <p>
+        Crie mais dois inputs, mas dessa vez o primeiro input vai pegar o resultado da soma anterior, e vai somar com outro valor aleatório, do segundo input.
+      </p>
+      <h4 class="h3-content bonus">Bonus</h4 class="h4-content">
+      Crie uma div, e quando passar o mouse sobre ela, apareça o resultado da multiplicação anterior.
+      Quando tirar o mouse, terá que sumir: o resultado da soma, o resultado da multiplicação, e a div deverá ficar vazia.<br><br>
+      <code class="pink">Dica Mestre:</code>
+      <pre class="exercise-1">
+        <code class="example">
+    Use <span class="dark-blue">const</span> <span class="light-blue">number</span> = <span class="green">Math</span>.<span class="events">round</span>(<span class="green">Math</span>.<span class="events">random</span>()  * <span class="green">50</span>) 
+    para gerar números aleatórios.
+        </code>
+      </pre>
+      <p>
+        E por enquanto, não se preocupe tanto com entender os significados dessas funções, mas se quiser pesquisar fique a vontade ✌
+      </p>
+      <h4 class="h3-content">Exercicio 2</h4>
+      <p>Crie uma div, e faça dois botões, quando você clicar no primeiro, uma imagem aparecerá na div.</p>
+      <p>Quando você clicar no segundo botão, uma segunda imagem irá substituir a primeira.</p>
+      <h4 class="h3-content bonus">Bonus</h4>
+      <p>
+        Quando você clicar duas vezes na div criada, irão aparecer as duas imagens na div e deverá adicionar uma borda de <code class="pink">3px solida e preta</code>.
+      </p>
+      <p>E na div, deverá ser adicionado um fundo da cor <code class="pink">cinza</code> e só poderão existir duas imagens dentro!</p>
+      <h4 class="h3-content">Exercicio 3</h4>
+      <p>
+        Crie um input e uma div, enquanto você digitar palavras no input, deverá aparecer no mesmo momento na div.<br>
+        Se não souber como fazer, procure no link que contem a lista de eventos 😉
+      </p> 
+      <p>Deverá conter um botão para limpar o texto do input e da div!</p>
+      <h4 class="h3-content bonus">Bonus</h4>
+      <p>
+        Quando o usuário for copiar o texto do input ou da div, faça aparecer no meio dos dois o texto: <code class="pink">Se for copiar o texto, deixe os créditos para o autor!</code>
+      </p>
+      <p>E não de fazer o botão <code class="pink">clear</code> limpar também o novo texto adicionado!</p>
+      <h2 class="h2-content" id="aditional-content">Recursos adicionais (opcional)</h2>
+      <p>Já que chegou até aqui, preparei alguns conteudos adicionais para voce se aprofundar mais, mas só o essencial, que você irá usar bastante no dia-a-dia.</p>
+      <p>Um deles com certeza é a documentação do nosso queridíssimo <code class="pink">AddEventListener</code>, é bom já ir se acostumando a ler a documentação das funções. 😉</p>
+      <ul>
+        <li class="last-li"><a href="https://www.w3schools.com/js/js_htmldom_eventlistener.asp" target="_blank">Documentação AddEventListener</a></li>
+        <li class="last-li"><a href="https://www.w3schools.com/jsref/dom_obj_event.asp" target="_blank">Lista de Eventos JavaScript</a></li>
+        <li class="last-li"><a href="https://www.w3schools.com/JSREF/jsref_number.asp" target="_blank">Como transformar string em números.</a></li>
+      </ul>
+      <p>Pode ver também um vídeo se aprofundando bem mais em eventos de JavaScript</p><br>
+      <iframe width="500" height="300" src="https://www.youtube.com/embed/wWnBB-mZIvY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <br><br><br><br>
+    </section>
+  </div>
+  <footer>
+    <div class="footer-content">
+      <h1>Obrigado pela leitura, e até a proxima ✌</h1>
+    </div>
+  </footer>
+  <script src="./script.js"></script>
+</body>
+</html>

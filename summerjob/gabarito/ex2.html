@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .img-div{
+      min-height: 300px;
+      min-width: 300px;
+      max-width: 700px;
+    }
+
+    .button{
+      margin: 5px;
+    }
+
+    .button1{
+      margin-left: 60px;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="img-div">
+    <img class="img-1">
+  </div>
+  <button class="button1 button">Imagem 1</button>
+  <button class="button2 button">Imagem 2</button>
+  <script>
+
+    const imgDiv = document.querySelector('.img-div');
+    const button1 = document.querySelector('.button1');
+    const button2= document.querySelector('.button2');
+    const img1 = document.querySelector('.img-1');
+
+    button1.addEventListener('click', function () {
+      img1.src = './img/bla.jpg';
+    })
+    button2.addEventListener('click', function () {
+      img1.src = './img/bla1.png';
+    })
+    imgDiv.addEventListener('copy', function () {
+      console.log('bla');
+    })
+    imgDiv.addEventListener('dblclick', function () {
+      img1.src = './img/bla.jpg';
+      const img2 = document.createElement('img')
+      img2.src = './img/bla1.png';
+      imgDiv.style.border = "solid black 3px";
+      imgDiv.style.background = "grey";
+      if (imgDiv.childNodes.length < 4) imgDiv.appendChild(img2);
+    })
+  </script>
+</body>
+</html>

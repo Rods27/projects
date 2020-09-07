@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+    body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .div{
+    padding: 15px;
+    border: black solid 2px;
+    border-radius: 3px;
+  }
+
+  input{
+    width: 50px;
+    margin: 0;
+  }
+
+  .final-div{
+    margin: 10px;
+    padding: 15px;
+  }
+  </style>
+<body>
+  <div class="main-div div">
+    <input type="text" class="input-1 input" readonly="readonly"> 
+    <input type="text" class="input-2 input" readonly="readonly">
+    <input type="text" class="input-3 input" readonly="readonly">
+    <button class="button-1">Somar</button>
+  </div>
+  <div class="other-div div">
+    <input type="text" class="input-4 input" readonly="readonly">
+    <input type="text" class="input-5 input" readonly="readonly">
+    <button class="button-2">multiplicar</button>
+  </div>
+  <div class="final-div div">
+  </div>
+  <script>
+    const number = Math.round(Math.random()  * 50)
+    const input1 = document.querySelector('.input-1');
+    const input2 = document.querySelector('.input-2');
+    const input3 = document.querySelector('.input-3');
+    const input4 = document.querySelector('.input-4');
+    const input5 = document.querySelector('.input-5');
+    const button1= document.querySelector('.button-1');
+    const button2= document.querySelector('.button-2');
+    const divFinal= document.querySelector('.final-div')
+
+    input1.value = number
+    input2.value = number
+    input4.value = number
+
+    button1.addEventListener('click', function () {
+      input3.value = Number(input1.value) + Number(input2.value);
+      button2.addEventListener('click', function () {
+        input5.value = input3.value * input4.value
+        mouseOverMouseOut(input5)
+      })
+    });
+
+    function mouseOverMouseOut (input) {
+      divFinal.addEventListener('mouseover', function () {
+        divFinal.innerText = input.value
+      divFinal.addEventListener('mouseout', function () {
+        divFinal.innerText = ''
+        input3.value = ''
+        input5.value = ''
+      })
+      })
+    }
+  </script>
+</body>
+</html>
