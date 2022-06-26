@@ -42,7 +42,9 @@
   <div class="final-div div">
   </div>
   <script>
-    const number = Math.round(Math.random()  * 50)
+    const number = Math.round(Math.random()  * 50);
+    const number2 = Math.round(Math.random()  * 50);
+    const number3 = Math.round(Math.random()  * 50);
     const input1 = document.querySelector('.input-1');
     const input2 = document.querySelector('.input-2');
     const input3 = document.querySelector('.input-3');
@@ -53,8 +55,8 @@
     const divFinal= document.querySelector('.final-div')
 
     input1.value = number
-    input2.value = number
-    input4.value = number
+    input2.value = number2
+    input4.value = number3
 
     button1.addEventListener('click', function () {
       input3.value = Number(input1.value) + Number(input2.value);

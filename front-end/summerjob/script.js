@@ -11,8 +11,5 @@ question.addEventListener('click', function () {
   style.href = "style1.css";
   header.appendChild(centralTitle);
   centralTitle.appendChild(centerh1);
-  navBar.removeChild(stylesheet)
+  navBar.removeChild(stylesheet);
 });
-
-
-
